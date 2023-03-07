@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" verbose="4" thread-count="10" parallel="tests">
+
+	<test name="Google Test">
+
+		<parameter name="url" value="https://www.google.com" />
+		<parameter name="browser" value="chrome" />
+
+
+		<classes>
+			<class name="testngsessions.Google" />
+		</classes>
+	</test>
+
+
+   <test name="Annotations Test">
+   
+   <classes>
+   <class name="testngsessions.Annotations"></class>
+   </classes>
+   </test>
+
+
+
+
+</suite>
