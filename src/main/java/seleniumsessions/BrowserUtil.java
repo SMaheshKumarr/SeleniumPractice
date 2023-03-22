@@ -24,7 +24,10 @@ public class BrowserUtil {
 		switch(browserName.toLowerCase().trim())
 		{
 		case "chrome":
-			driver=new ChromeDriver();
+			ChromeOptions co = new ChromeOptions();
+			co.addArguments("--remote-allow-origins=*");
+			driver=new ChromeDriver(co);
+			
 			break;
 		case "firefox":
 			driver=new FirefoxDriver();
